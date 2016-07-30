@@ -11,5 +11,8 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 
 $(function() {
-  $('#allLetters').text(alphabet);
+  var alphabetHTML = "";
+  alphabet.forEach(function(letter){alphabetHTML += "<span>" + letter + "</span>"})
+  console.log(alphabetHTML)
+  $('#allLetters').html(alphabetHTML);
 });
