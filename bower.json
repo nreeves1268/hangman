@@ -1,0 +1,20 @@
+{
+  "name": "hangman",
+  "homepage": "https://github.com/nreeves1268/hangman",
+  "authors": [
+    "Nate Reeves <nreeves1268@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

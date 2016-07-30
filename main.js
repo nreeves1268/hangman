@@ -5,4 +5,4 @@ function getRandomIntInclusive(min, max) {
 }
 
 var indexOfWord = getRandomIntInclusive (0,2);
-console.log(indexOfWord);
+var secretWord = listOfSecretWords[indexOfWord];
