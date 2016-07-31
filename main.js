@@ -12,7 +12,13 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 $(function() {
   var alphabetHTML = "";
-  alphabet.forEach(function(letter){alphabetHTML += "<span>" + letter + "</span>"})
-  console.log(alphabetHTML)
+  alphabet.forEach(function(letter){alphabetHTML += "<span>" + letter + "</span>"});
   $('#allLetters').html(alphabetHTML);
+
+  var secretWordHTML = "";
+  secretWord.split('').forEach(function(letter){secretWordHTML += "<span>" + letter + "</span>"});
+  $('#secretWord').html(secretWordHTML);
+
+
 });
+
