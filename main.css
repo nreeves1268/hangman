@@ -11,3 +11,7 @@ color: transparent;
 .secretLetterUnderline {
   border-bottom: 2px solid black;
 }
+
+.secretLetterVisible {
+  color: black;
+}

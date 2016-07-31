@@ -16,13 +16,24 @@ var secretWord = listOfSecretWords[indexOfWord];
 
 var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
+var clickLetterHandler = function(e) {
+  var clickedLetter = e.target.innerText.toUpperCase();
+  $('#secretWord span').each(function(_, letterSpan){
+    var currentLetterInSpan = letterSpan.innerText.toUpperCase();
+    if (clickedLetter == currentLetterInSpan){
+      $(letterSpan).removeClass('secretLetterInvisible').addClass('secretLetterVisible');
+    }
+  })
+};
+
 
 $(function() {
   displayLetters(alphabet, $('#allLetters'));
-  displayLetters(secretWord.split(''), $('#secretWord'));
+  var secretWordLetters = secretWord.split('');
+  displayLetters(secretWordLetters, $('#secretWord'));
   $('#secretWord span').addClass('secretLetterUnderline secretLetterInvisible');
 
-  $('#allLetters span').click(function(e) { console.log(e.target.innerText) });
+  $('#allLetters span').click(clickLetterHandler);
 
 });
 
