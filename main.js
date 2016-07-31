@@ -4,9 +4,9 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function makeClickableLetters(arrayOfLetters, receivingDiv) {
+function displayLetters(arrayOfLetters, receivingDiv) {
   var clickableLettersHTML = "";
-  arrayOfLetters.forEach(function(letter){clickableLettersHTML += "<span class='clickableLetter'>" + letter + "</span>"});
+  arrayOfLetters.forEach(function(letter){clickableLettersHTML += "<span class='displayLetters'>" + letter + "</span>"});
   receivingDiv.html(clickableLettersHTML);
 
 }
@@ -18,10 +18,11 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 
 $(function() {
-  makeClickableLetters(alphabet, $('#allLetters'));
-  makeClickableLetters(secretWord.split(''), $('#secretWord'));
+  displayLetters(alphabet, $('#allLetters'));
+  displayLetters(secretWord.split(''), $('#secretWord'));
   $('#secretWord span').addClass('secretLetterUnderline secretLetterInvisible');
 
+  $('#allLetters span').click(function(e) { console.log(e.target.innerText) });
 
 });
 
