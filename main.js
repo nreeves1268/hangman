@@ -22,6 +22,8 @@ var clickLetterHandler = function(e) {
   });
 
   if (foundLetter == false) {
+      var bodyPartToShow = bodyParts[currentMissedGuess];
+      $('#' + bodyPartToShow).css('visibility', 'visible');
       currentMissedGuess++;
       if (currentMissedGuess == maxMissedGuesses) {
         $('h1').text('The Ringwraiths found you!');
@@ -35,8 +37,9 @@ var clickLetterHandler = function(e) {
   }
 };
 
-var maxMissedGuesses = 6;
 var currentMissedGuess = 0;
+var bodyParts = ['head', 'torso', 'leftArm', 'rightArm', 'leftLeg', 'rightLeg'];
+var maxMissedGuesses = bodyParts.length;
 
 $(function() {
   $('#hangmanArt .bodyPart').css('visibility', 'hidden');
