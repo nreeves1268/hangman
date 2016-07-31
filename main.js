@@ -39,6 +39,7 @@ var maxMissedGuesses = 6;
 var currentMissedGuess = 0;
 
 $(function() {
+  $('#hangmanArt .bodyPart').css('visibility', 'hidden');
   var listOfSecretWords = ['Frodo', 'Sam', 'Gandalf', 'Merry', 'Pippin'];
   var indexOfWord = getRandomIntInclusive (0,listOfSecretWords.length);
   var secretWord = listOfSecretWords[indexOfWord];

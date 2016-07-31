@@ -5,7 +5,7 @@
 }
 
 .secretLetterInvisible {
-color: transparent;
+  color: transparent;
 }
 
 .secretLetterUnderline {
@@ -14,4 +14,14 @@ color: transparent;
 
 .secretLetterVisible {
   color: black;
+}
+
+.hangmanSpacer {
+  min-width: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.hangmanSpacer.first {
+  display: block;
 }
