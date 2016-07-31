@@ -18,13 +18,10 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 
 $(function() {
-  makeClickableLetters(alphabet, $('#allLetters'))
-  makeClickableLetters(secretWord.split(''), $('#secretWord'))
+  makeClickableLetters(alphabet, $('#allLetters'));
+  makeClickableLetters(secretWord.split(''), $('#secretWord'));
+  $('#secretWord span').addClass('secretLetterUnderline secretLetterInvisible');
 
-  /*var secretWordHTML = "";
-  secretWord.split('').forEach(function(letter){secretWordHTML += "<span>" + letter + "</span>"});
-  $('#secretWord').html(secretWordHTML);
-*/
 
 });
 
